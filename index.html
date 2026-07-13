@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rajat Gehlot — Video Editor & Motion Designer. High-retention edits, motion graphics, sound design and VFX cut like beat-science." />
+    <meta name="theme-color" content="#0a0a0c" />
+    <title>Rajat Gehlot — Video Editor &amp; Motion Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- grain + scanline overlays -->
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <!-- sticky timeline ruler / nav -->
+    <header class="ruler" id="ruler">
+      <div class="ruler__chrome">
+        <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+        <span class="ruler__project">RAJAT_GEHLOT.prproj</span>
+        <span class="ruler__clock" id="clock">00:00:00:00</span>
+      </div>
+      <nav class="ruler__track" aria-label="Section markers">
+        <div class="ruler__playhead" id="playhead" aria-hidden="true"></div>
+        <a class="marker" href="#home" data-tc="00:00:00:00"><span>00</span>HOME</a>
+        <a class="marker" href="#about" data-tc="00:00:04:12"><span>01</span>ABOUT</a>
+        <a class="marker" href="#reel" data-tc="00:00:09:00"><span>02</span>REEL</a>
+        <a class="marker" href="#stack" data-tc="00:00:14:08"><span>03</span>STACK</a>
+        <a class="marker" href="#contact" data-tc="00:00:19:20"><span>04</span>CONTACT</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero__rec"><span class="rec-dot"></span>REC</div>
+        <h1 class="hero__title">
+          <span class="line" data-reveal>RAJAT</span>
+          <span class="line line--outline" data-reveal>GEHLOT</span>
+        </h1>
+        <div class="hero__subtrack">
+          <span class="hero__bracket">[</span>
+          <span class="hero__role" id="role-cycle">Video Editor</span>
+          <span class="hero__bracket">]</span>
+          <span class="hero__caption">// beat-science visual cuts</span>
+        </div>
+        <p class="hero__lede">
+          High-end, minimal, no-templates. Every cut lands like a heavy drum snare.
+        </p>
+        <a class="hero__cta" href="#reel">
+          <span class="play-icon" aria-hidden="true"></span>
+          Watch the reel
+        </a>
+        <div class="hero__waveform" aria-hidden="true">
+          <div class="waveform" id="waveform"></div>
+        </div>
+      </section>
+
+      <!-- STATUS MARQUEE -->
+      <div class="marquee" role="note" aria-label="Availability status">
+        <div class="marquee__track">
+          <span>● OPEN FOR WORK — VIDEO EDITING &amp; MOTION GRAPHICS ROLES, SUMMER 2026</span>
+          <span>● OPEN FOR WORK — VIDEO EDITING &amp; MOTION GRAPHICS ROLES, SUMMER 2026</span>
+          <span>● OPEN FOR WORK — VIDEO EDITING &amp; MOTION GRAPHICS ROLES, SUMMER 2026</span>
+          <span>● OPEN FOR WORK — VIDEO EDITING &amp; MOTION GRAPHICS ROLES, SUMMER 2026</span>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="section-head" data-reveal>
+          <span class="section-num">01</span>
+          <h2>About</h2>
+        </div>
+        <div class="monitor" data-reveal>
+          <div class="monitor__bar">
+            <span>PROGRAM MONITOR</span>
+            <span class="monitor__res">1920×1080 · 24fps</span>
+          </div>
+          <div class="monitor__screen">
+            <p class="subtitle-overlay">
+              "I'm a Video Editor &amp; Motion Designer obsessed with high-end minimal
+              aesthetics. Coming from a rap music background, I treat editing like pure
+              beat-science — making sure every visual cut lands like a heavy drum snare."
+            </p>
+          </div>
+          <div class="monitor__scrub">
+            <span class="tc">00:00:00:00</span>
+            <div class="scrub-bar"><div class="scrub-fill"></div></div>
+            <span class="tc">00:01:47:12</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- REEL / PORTFOLIO -->
+      <section class="reel" id="reel">
+        <div class="section-head" data-reveal>
+          <span class="section-num">02</span>
+          <h2>Selected Cuts</h2>
+        </div>
+        <div class="reel__grid" id="reel-grid"></div>
+      </section>
+
+      <!-- STACK: skills as timeline tracks + tech badges -->
+      <section class="stack" id="stack">
+        <div class="section-head" data-reveal>
+          <span class="section-num">03</span>
+          <h2>Timeline &amp; Tools</h2>
+        </div>
+
+        <div class="tracks" data-reveal>
+          <div class="track">
+            <div class="track__label"><span class="track__id">V2</span>Motion</div>
+            <div class="track__lane">
+              <span class="clip-chip clip-chip--motion">Motion Graphics &amp; Design</span>
+              <span class="clip-chip clip-chip--motion">Kinetic Transitions</span>
+              <span class="clip-chip clip-chip--motion">VFX &amp; Visual Effects</span>
+              <span class="clip-chip clip-chip--motion">Node-based Storytelling</span>
+            </div>
+          </div>
+          <div class="track">
+            <div class="track__label"><span class="track__id">V1</span>Video</div>
+            <div class="track__lane">
+              <span class="clip-chip clip-chip--video">Video Editing</span>
+              <span class="clip-chip clip-chip--video">Camera Tracking</span>
+              <span class="clip-chip clip-chip--video">Documentary Editing</span>
+              <span class="clip-chip clip-chip--video">Multi-cam Podcast Editing</span>
+              <span class="clip-chip clip-chip--video">Typography Pacing</span>
+            </div>
+          </div>
+          <div class="track">
+            <div class="track__label"><span class="track__id">A1</span>Audio</div>
+            <div class="track__lane">
+              <span class="clip-chip clip-chip--audio">Sound Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools" data-reveal>
+          <span class="tool-badge">DaVinci Resolve</span>
+          <span class="tool-badge">Fusion Nodes — Spatial Tracker</span>
+          <span class="tool-badge">Fairlight — Audio Transient Engine</span>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="section-head" data-reveal>
+          <span class="section-num">04</span>
+          <h2>Export &amp; Deliver</h2>
+        </div>
+        <div class="contact__panel" data-reveal>
+          <p class="contact__lede">Got a cut that needs to hit harder? Let's render something.</p>
+          <a class="contact__cta" href="mailto:hello@rajatgehlot.com">
+            hello@rajatgehlot.com
+            <span class="arrow">→</span>
+          </a>
+          <div class="contact__socials">
+            <a href="https://www.linkedin.com/in/rajat-gehlot-editor/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/rajatt_gehlot/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.behance.net/rajatkumar117" target="_blank" rel="noopener noreferrer">Behance</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="credits">
+      <p>© <span id="year"></span> Rajat Gehlot — cut on DaVinci Resolve.</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
